@@ -150,6 +150,13 @@ alias treeacl='tree -A -C -L 2'
 alias em='emacs -nw'     # No X11 windows
 alias eqq='emacs -nw -Q' # No config and no X11
 
+export EDITOR=vim
+
+# source highlighting in less, you need to fist do apt-get install source-highlight
+export PAGER=less
+export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+export LESS=' -R -N '
+
 # 2.4) grep options
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;31' # green for matches
@@ -174,3 +181,15 @@ if [ -s ~/.nvm/nvm.sh ]; then
     source ~/.nvm/nvm.sh
     nvm use v0.10.12 &> /dev/null # silence nvm use; needed for rsync
 fi
+
+# allows to pipe into the linux clipboard
+alias xcopy='xclip -selection c'
+
+# 256 colors in the terminal
+# you might need to run sudo apt-get install ncurses-term
+# check by typing tput colors
+export TERM=xterm-256color
+
+# Auto jump tool
+# https://github.com/joelthelion/autojump/blob/master/README.md
+. /usr/share/autojump/autojump.sh
