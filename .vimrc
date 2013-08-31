@@ -17,7 +17,6 @@ filetype on
 filetype plugin on
 syntax enable
 set grepprg=grep\ -nH\ $*
-top coder new c++
 " Who doesn't like autoindent?
 set autoindent
 
