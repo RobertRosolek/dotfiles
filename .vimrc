@@ -81,7 +81,7 @@ set undolevels=1000           " 1000 undos
 
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
+match ExtraWhitespace /\s\+\%#\@<!$/
 "{{{Look and Feel
 
 "set background=dark
