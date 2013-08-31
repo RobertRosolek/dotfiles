@@ -17,7 +17,7 @@ filetype on
 filetype plugin on
 syntax enable
 set grepprg=grep\ -nH\ $*
-
+top coder new c++
 " Who doesn't like autoindent?
 set autoindent
 
@@ -65,9 +65,6 @@ set hlsearch
 
 " Since I use linux, I want this
 let g:clipbrdDefaultReg = '+'
-
-" When I close a tab, remove the buffer
-set nohidden
 
 " Set off the other paren
 highlight MatchParen ctermbg=4
