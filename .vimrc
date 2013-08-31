@@ -82,6 +82,7 @@ set undolevels=1000           " 1000 undos
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * redraw!
 "{{{Look and Feel
 
 "set background=dark
