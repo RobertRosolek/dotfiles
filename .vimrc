@@ -21,6 +21,10 @@ set grepprg=grep\ -nH\ $*
 " Who doesn't like autoindent?
 set autoindent
 
+" http://vim.wikia.com/wiki/Making_Parenthesis_And_Brackets_Handling_Easier
+set smartindent
+inoremap { {<CR><BS>}<Esc>ko
+
 " Spaces are better than a tab character
 set expandtab
 set smarttab
