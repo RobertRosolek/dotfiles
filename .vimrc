@@ -7,6 +7,12 @@ set showcmd
 " Folding Stuffs
 set foldmethod=marker
 
+" this needs template http://www.vim.org/scripts/script.php?script_id=2647 to
+" be installed, here is the description
+" http://stackoverflow.com/questions/3785320/how-to-use-a-template-in-vim
+let g:file_template_default = {}
+let g:file_template_default['cpp'] = 'template'
+
 " Needed for Syntax Highlighting and stuff
 filetype on
 filetype plugin on
