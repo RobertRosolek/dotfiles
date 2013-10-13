@@ -13,6 +13,9 @@ set foldmethod=marker
 let g:file_template_default = {}
 let g:file_template_default['cpp'] = 'template'
 
+" disable search highlight
+set nohlsearch
+
 " Needed for Syntax Highlighting and stuff
 filetype on
 filetype plugin on
