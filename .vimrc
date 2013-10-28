@@ -13,8 +13,11 @@ set foldmethod=marker
 let g:file_template_default = {}
 let g:file_template_default['cpp'] = 'template'
 
-" disable search highlight
-set nohlsearch
+" incremental search
+set incsearch
+
+" clear highlighting with ctrl+l
+nnoremap <C-l> :nohlsearch<CR><C-l>
 
 " Needed for Syntax Highlighting and stuff
 filetype on
