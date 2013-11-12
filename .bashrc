@@ -193,3 +193,5 @@ export TERM=xterm-256color
 # Auto jump tool
 # https://github.com/joelthelion/autojump/blob/master/README.md
 . /usr/share/autojump/autojump.sh
+
+export HISTFILESIZE=20000
