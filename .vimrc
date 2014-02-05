@@ -92,6 +92,9 @@ set undolevels=1000           " 1000 undos
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * redraw!
+
+" edited buffers can be not displayed anywhere
+set hidden
 "{{{Look and Feel
 
 "set background=dark
