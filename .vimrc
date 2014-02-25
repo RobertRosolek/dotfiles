@@ -90,8 +90,10 @@ set undolevels=1000           " 1000 undos
 
 " highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * redraw!
+au ColorScheme * highlight ExtraWhitespace guibg=red
+au BufEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
 " edited buffers can be not displayed anywhere
 set hidden
