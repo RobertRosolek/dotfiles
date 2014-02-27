@@ -1,3 +1,4 @@
+! swap ctrl and alt
 remove mod1 = Alt_L
 remove control = Control_L
 add mod1 = Control_L
