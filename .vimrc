@@ -100,8 +100,8 @@ autocmd BufWinLeave * call clearmatches()
 set hidden
 "{{{Look and Feel
 
-"set background=dark
-"colorscheme solarized
+set background=dark
+colorscheme solarized
 
 "Status line gnarliness
 set laststatus=2
