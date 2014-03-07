@@ -98,6 +98,9 @@ autocmd BufWinLeave * call clearmatches()
 
 " edited buffers can be not displayed anywhere
 set hidden
+
+" autosave before make
+set autowrite
 "{{{Look and Feel
 
 set background=dark
