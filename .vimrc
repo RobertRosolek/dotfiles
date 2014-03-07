@@ -101,6 +101,9 @@ set hidden
 
 " autosave before make
 set autowrite
+
+" silent make
+nnoremap <leader>m :silent make\|redraw!\|cc<CR>
 "{{{Look and Feel
 
 set background=dark
