@@ -88,13 +88,15 @@ set sidescrolloff=5           " keep at least 5 lines left/right
 set cmdheight=2               " command line two lines high
 set undolevels=1000           " 1000 undos
 
-" highlight trailing whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
+" Highlight EOL whitespace,
+" http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+highlight ExtraWhitespace ctermbg=darkred guibg=#382424
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+
+" The above flashes annoyingly while typing, be calmer in insert mode
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 
 " edited buffers can be not displayed anywhere
 set hidden
