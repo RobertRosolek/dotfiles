@@ -78,10 +78,10 @@ let g:clipbrdDefaultReg = '+'
 highlight MatchParen ctermbg=4
 " }}}
 
-"highlight current line
-" set cul
+" highlight current line
+set cul
 " adjust color
-" hi CursorLine term=none cterm=none ctermbg=3
+hi CursorLine term=none cterm=none ctermbg=3
 
 set scrolloff=5               " keep at least 5 lines above/below
 set sidescrolloff=5           " keep at least 5 lines left/right
