@@ -1,5 +1,7 @@
 ! swap ctrl and alt
-remove mod1 = Alt_L
-remove control = Control_L
-add mod1 = Control_L
-add control = Alt_L
+clear control
+clear mod1
+keycode 37 = Alt_L Meta_L
+keycode 64 = Control_L
+add control = Control_L Control_R
+add mod1 = Alt_L Meta_L
