@@ -4,3 +4,4 @@
 colorscheme solarized
 set background=dark
 set guifont=Ubuntu\ Mono\ Bold\ 12
+set encoding=utf8
