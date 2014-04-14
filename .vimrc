@@ -106,6 +106,9 @@ set autowrite
 
 " silent make
 nnoremap <C-m> :silent make\|redraw!\|cc<CR>
+
+" complete to best matching (don't show all options before completing)
+set wildmode=full
 "{{{Look and Feel
 
 set background=dark
