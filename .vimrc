@@ -1,5 +1,20 @@
-" Necesary  for lots of cool vim things
+" Necessary  for lots of cool vim things
 set nocompatible
+
+filetype off                  " required for Vundle
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'vimwiki'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " This shows what you are typing as a command.  I love this!
 set showcmd
