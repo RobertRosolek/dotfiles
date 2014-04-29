@@ -10,11 +10,16 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'DoxygenToolkit.vim'
+
 Plugin 'vimwiki'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" vimviki projet
+let g:vimwiki_list = [{'path': '~/Dropbox/wiki', 'path_html': '~/Dropbox/wiki/html'}]
 
 " This shows what you are typing as a command.  I love this!
 set showcmd
