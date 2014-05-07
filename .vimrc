@@ -14,9 +14,6 @@ Plugin 'DoxygenToolkit.vim'
 
 Plugin 'vimwiki'
 
-Plugin 'Rip-Rip/clang_complete'
-let g:clang_library_path='/usr/lib/llvm-3.4/lib'
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
