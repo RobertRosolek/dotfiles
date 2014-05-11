@@ -129,6 +129,9 @@ nnoremap <C-m> :silent make\|redraw!\|cc<CR>
 
 " complete to best matching (don't show all options before completing)
 set wildmode=full
+
+" gm to go to the center of the line
+nnoremap gm :call cursor(0, len(getline('.'))/2)<CR>
 "{{{Look and Feel
 
 set background=dark
