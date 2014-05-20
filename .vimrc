@@ -8,6 +8,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
+Plugin 'tpope/vim-fugitive'
+
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'DoxygenToolkit.vim'
