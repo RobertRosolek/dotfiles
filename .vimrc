@@ -138,6 +138,9 @@ nnoremap gm :call cursor(0, len(getline('.'))/2)<CR>
 " man pages in vim :-)
 runtime ftplugin/man.vim
 nnoremap <silent>K :<C-U>exe "Man" v:count "<cword>"<CR>
+
+" launch explorer
+nnoremap <C-k> :E<CR>
 "{{{Look and Feel
 
 set background=dark
