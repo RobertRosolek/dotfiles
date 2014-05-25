@@ -16,6 +16,10 @@ Plugin 'DoxygenToolkit.vim'
 
 Plugin 'vimwiki'
 
+Plugin 'WolfgangMehner/vim-plugins'
+
+Plugin 'oplatek/Conque-Shell'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -113,12 +117,12 @@ set undolevels=1000           " 1000 undos
 " Highlight EOL whitespace,
 " http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 highlight ExtraWhitespace ctermbg=darkred guibg=#382424
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd ColorScheme *.* highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd BufWinEnter *.* match ExtraWhitespace /\s\+$/
 
 " The above flashes annoyingly while typing, be calmer in insert mode
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave *.* match ExtraWhitespace /\s\+$/
+autocmd InsertEnter *.* match ExtraWhitespace /\s\+\%#\@<!$/
 
 " edited buffers can be not displayed anywhere
 set hidden
