@@ -150,6 +150,11 @@ nnoremap <C-k> :E<CR>
 nnoremap <C-h> :ConqueTermSplit bash<CR>
 nnoremap <C-i> :ConqueTermVSplit bash<CR>
 
+" don't show backup files in explorer
+set backupdir=./.backup,.,/tmp
+set directory=./.backup,.,/tmp
+
+
 "{{{Look and Feel
 
 set background=dark
