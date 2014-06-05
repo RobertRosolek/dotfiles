@@ -158,6 +158,7 @@ nnoremap <C-i> :ConqueTermVSplit bash<CR>
 set backupdir=./.backup,.,/tmp
 set directory=./.backup,.,/tmp
 
+set history=1000
 
 "{{{Look and Feel
 
