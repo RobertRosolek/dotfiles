@@ -131,7 +131,11 @@ set hidden
 set autowrite
 
 " silent make
-nnoremap <C-m> :silent make\|redraw!\|cc<CR>
+" TODO this line causes an error similiar to the
+" one described in
+" http://stackoverflow.com/questions/11733388/how-do-i-prevent-my-vim-autocmd-from-running-in-the-command-line-window
+" try to fix this
+"nnoremap <C-m> :silent make\|redraw!\|cc<CR>
 
 " complete to best matching (don't show all options before completing)
 set wildmode=full
