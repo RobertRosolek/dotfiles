@@ -20,6 +20,9 @@ Plugin 'WolfgangMehner/vim-plugins'
 
 Plugin 'oplatek/Conque-Shell'
 
+" this needs to be installed to work, google it up :-)
+Plugin 'wincent/command-t'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
