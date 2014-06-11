@@ -163,6 +163,8 @@ set directory=./.backup,.,/tmp
 
 set history=1000
 
+let mapleader = ","
+
 "{{{Look and Feel
 
 set background=dark
