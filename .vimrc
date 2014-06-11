@@ -166,10 +166,17 @@ set history=1000
 
 let mapleader = ","
 
-" command-T plugin mappings
+"{{{ Command-T Plugin
+
+" mappings
 let g:CommandTCancelMap='<C-[>'
 let g:CommandTBackspaceMap='<C-h>'
 let g:CommandTCursorLeftMap='Left'
+
+" options
+let g:CommandTMatchWindowReverse=1
+
+"}}}
 
 "{{{Look and Feel
 
