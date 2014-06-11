@@ -3,6 +3,7 @@ set nocompatible
 
 filetype off                  " required for Vundle
 
+"{{{Vundle Plugin Managment
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -26,6 +27,7 @@ Plugin 'wincent/command-t'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+" }}}
 
 " vimviki projet
 let g:vimwiki_list = [{'path': '~/Dropbox/wiki', 'path_html': '~/Dropbox/wiki/html'}]
@@ -105,7 +107,6 @@ let g:clipbrdDefaultReg = '+'
 
 " Set off the other paren
 highlight MatchParen ctermbg=4
-" }}}
 
 " highlight current line
 set cul
