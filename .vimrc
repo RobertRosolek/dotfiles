@@ -165,6 +165,10 @@ set history=1000
 
 let mapleader = ","
 
+" command-T plugin mappings
+let g:CommandTCancelMap='<C-[>'
+let g:CommandTBackspaceMap='<C-h>'
+
 "{{{Look and Feel
 
 set background=dark
