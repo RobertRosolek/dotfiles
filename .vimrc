@@ -156,7 +156,7 @@ nnoremap <C-k> :E<CR>
 
 " launch conque bash in horizontal / vertical split
 nnoremap <C-h> :ConqueTermSplit bash<CR>
-nnoremap <C-i> :ConqueTermVSplit bash<CR>
+" nnoremap <C-i> :ConqueTermVSplit bash<CR> not needed, tab works for this
 
 " don't show backup files in explorer
 set backupdir=./.backup,.,/tmp
