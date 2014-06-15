@@ -156,7 +156,7 @@ nnoremap <C-k> :E<CR>
 
 " launch conque bash in horizontal / vertical split
 nnoremap <C-h> :ConqueTermSplit bash<CR>
-" nnoremap <C-i> :ConqueTermVSplit bash<CR> not needed, tab works for this
+nnoremap <C-i> :ConqueTermVSplit bash<CR> not needed, tab works for this
 
 " don't show backup files in explorer
 set backupdir=./.backup,.,/tmp
@@ -166,7 +166,7 @@ set history=1000
 
 let mapleader = ","
 
-"{{{ Command-T Plugin
+"{{{Command-T Plugin
 
 " mappings
 let g:CommandTCancelMap='<C-[>'
@@ -176,7 +176,7 @@ let g:CommandTCursorLeftMap='Left'
 " options
 let g:CommandTMatchWindowReverse=1
 
-"}}}
+" }}}
 
 "{{{Look and Feel
 
