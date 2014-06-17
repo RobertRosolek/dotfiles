@@ -198,3 +198,6 @@ export HISTFILESIZE=20000
 
 # who wants to be shown host name all the time
 export PS1='\[\033[0;35m\]\u\[\033[0;33m\] \w\[\033[00m\]: '
+
+# 80 columns man
+export MANWIDTH=80
