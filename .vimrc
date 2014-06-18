@@ -1,3 +1,7 @@
+" needed for fish shell
+set shell=/bin/bash
+set t_Co=256
+
 " Necessary  for lots of cool vim things
 set nocompatible
 
