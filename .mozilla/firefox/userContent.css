@@ -1,0 +1,11 @@
+/* this file should be put in proper directory in mozilla firefox configuation file
+ as described in http://superuser.com/questions/318912/how-to-override-the-css-of-a-site-in-firefox-with-usercontent-css */
+@-moz-document domain(superuser.com) {
+   #hot-network-questions { display: none; }
+}
+@-moz-document domain(stackoverflow.com) {
+   #hot-network-questions { display: none; }
+}
+@-moz-document domain(facebook.com) {
+   img { display: none !important; }
+}
