@@ -1,5 +1,4 @@
-" needed for fish shell
-set shell=/bin/bash
+set shell=/usr/bin/zsh
 set t_Co=256
 
 " Necessary  for lots of cool vim things
