@@ -6,6 +6,9 @@
 @-moz-document domain(stackoverflow.com) {
    #hot-network-questions { display: none; }
 }
+@-moz-document domain(unix.stackexchange.com) {
+   #hot-network-questions { display: none; }
+}
 @-moz-document domain(facebook.com) {
    img { display: none !important; }
 }
