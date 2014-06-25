@@ -165,7 +165,7 @@ runtime ftplugin/man.vim
 nnoremap <silent>K :<C-U>exe "Man" v:count "<cword>"<CR>
 
 " launch explorer
-nnoremap <C-k> :E<CR>
+nnoremap <C-k> :Explore<CR>
 
 " launch conque bash in horizontal / vertical split
 nnoremap <C-h> :ConqueTermSplit bash<CR>
