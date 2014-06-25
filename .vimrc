@@ -22,6 +22,10 @@ Plugin 'vimwiki'
 
 Plugin 'WolfgangMehner/vim-plugins'
 
+" this needs to be after WolfgangMehner/vim-plugins because
+" they have conflict command name Make
+Plugin 'tpope/vim-dispatch'
+
 Plugin 'oplatek/Conque-Shell'
 
 " this needs to be installed to work, google it up :-)
