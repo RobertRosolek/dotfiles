@@ -28,8 +28,14 @@ Plugin 'tpope/vim-dispatch'
 
 Plugin 'oplatek/Conque-Shell'
 
-" this needs to be installed to work, google it up :-)
+" additional steps need to be done so that this works, google it up :-)
 Plugin 'wincent/command-t'
+
+Plugin 'scrooloose/syntastic'
+let g:syntastic_c_check_header = 1
+let g:syntastic_enable_balloons = 1
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
