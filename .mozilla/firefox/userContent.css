@@ -15,3 +15,6 @@
 @-moz-document domain(facebook.com) {
    img { display: none !important; }
 }
+@-moz-document domain(facebook.com) {
+   span[class*='img'] { display: none !important }
+}
