@@ -9,6 +9,9 @@
 @-moz-document domain(unix.stackexchange.com) {
    #hot-network-questions { display: none; }
 }
+@-moz-document domain(tex.stackexchange.com) {
+   #hot-network-questions { display: none; }
+}
 @-moz-document domain(askubuntu.com) {
    #hot-network-questions { display: none; }
 }
