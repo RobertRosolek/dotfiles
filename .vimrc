@@ -18,6 +18,8 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'DoxygenToolkit.vim'
 
+Plugin 'jcf/vim-latex'
+
 Plugin 'vimwiki'
 
 Plugin 'WolfgangMehner/vim-plugins'
