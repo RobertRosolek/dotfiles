@@ -12,6 +12,9 @@
 @-moz-document domain(tex.stackexchange.com) {
    #hot-network-questions { display: none; }
 }
+@-moz-document domain(math.stackexchange.com) {
+   #hot-network-questions { display: none; }
+}
 @-moz-document domain(askubuntu.com) {
    #hot-network-questions { display: none; }
 }
