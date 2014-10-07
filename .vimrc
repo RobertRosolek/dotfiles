@@ -1,10 +1,9 @@
-set shell=/usr/bin/zsh
 set t_Co=256
+
+filetype off                  " required for Vundle
 
 " Necessary  for lots of cool vim things
 set nocompatible
-
-filetype off                  " required for Vundle
 
 "{{{Vundle Plugin Managment
 " set the runtime path to include Vundle and initialize
@@ -64,9 +63,6 @@ let g:file_template_default['cpp'] = 'template'
 " incremental search
 set incsearch
 
-" clear highlighting with ctrl+l
-nnoremap <C-l> :nohlsearch<CR><C-l>
-
 " Needed for Syntax Highlighting and stuff
 filetype on
 filetype plugin on
@@ -98,9 +94,6 @@ endif
 set wildmenu
 set wildmode=list:longest,full
 
-" Enable mouse support in console
-set mouse=a
-
 " Got backspace?
 set backspace=2
 
@@ -125,14 +118,8 @@ let g:clipbrdDefaultReg = '+'
 " Set off the other paren
 highlight MatchParen ctermbg=4
 
-" highlight current line
-set cul
-" adjust color
-hi CursorLine term=none cterm=none ctermbg=3
-
 set scrolloff=5               " keep at least 5 lines above/below
 set sidescrolloff=5           " keep at least 5 lines left/right
-set cmdheight=2               " command line two lines high
 set undolevels=1000           " 1000 undos
 
 " Highlight EOL whitespace,
@@ -145,12 +132,6 @@ autocmd BufWinEnter *.* match ExtraWhitespace /\s\+$/
 autocmd InsertLeave *.* match ExtraWhitespace /\s\+$/
 autocmd InsertEnter *.* match ExtraWhitespace /\s\+\%#\@<!$/
 
-" edited buffers can be not displayed anywhere
-set hidden
-
-" autosave before make
-set autowrite
-
 " silent make
 " TODO this line causes an error similiar to the
 " one described in
@@ -158,18 +139,9 @@ set autowrite
 " try to fix this
 "nnoremap <C-m> :silent make\|redraw!\|cc<CR>
 
-" complete to best matching (don't show all options before completing)
-set wildmode=full
-
-" gm to go to the center of the line
-nnoremap gm :call cursor(0, len(getline('.'))/2)<CR>
-
 " man pages in vim :-)
 runtime ftplugin/man.vim
 nnoremap <silent>K :<C-U>exe "Man" v:count "<cword>"<CR>
-
-" launch explorer
-nnoremap <C-k> :Explore<CR>
 
 " launch conque bash in horizontal / vertical split
 nnoremap <C-h> :ConqueTermSplit bash<CR>
