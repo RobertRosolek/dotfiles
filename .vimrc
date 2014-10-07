@@ -44,6 +44,8 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 " }}}
 
+let g:Tex_GotoError=0
+
 " vimviki projet
 let g:vimwiki_list = [{'path': '~/Dropbox/wiki', 'path_html': '~/Dropbox/wiki/html'}]
 
