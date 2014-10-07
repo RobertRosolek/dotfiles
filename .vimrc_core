@@ -1,7 +1,7 @@
 set shell=/bin/zsh
 
-" Necessary  for lots of cool vim things
-set nocompatible
+" launch explorer
+nnoremap <space>k :Explore<CR>
 
 " clear highlighting with ctrl+l
 nnoremap <C-l> :nohlsearch<CR><C-l>

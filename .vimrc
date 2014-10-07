@@ -2,6 +2,9 @@ set t_Co=256
 
 filetype off                  " required for Vundle
 
+" Necessary  for lots of cool vim things
+set nocompatible
+
 "{{{Vundle Plugin Managment
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -137,9 +140,6 @@ autocmd InsertEnter *.* match ExtraWhitespace /\s\+\%#\@<!$/
 " man pages in vim :-)
 runtime ftplugin/man.vim
 nnoremap <silent>K :<C-U>exe "Man" v:count "<cword>"<CR>
-
-" launch explorer
-nnoremap <C-k> :Explore<CR>
 
 " launch conque bash in horizontal / vertical split
 nnoremap <C-h> :ConqueTermSplit bash<CR>
