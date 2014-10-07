@@ -1,2 +1,3 @@
-set passkeys+=mail.google.com:jkroae#<CR>,gi
+set passkeys+=mail.google.com:'!#*+-./<C-Down><C-s><Enter>?INU[]acefjk lmnopqrsuvxyz',*a,*n,*r,*s,*t,*u,ga,gc,gd,gi,gl,gs,gt,yo
+set strictfocus+=mail.google.com:laissez-faire
 set passkeys+=read.amazon.com:<space><left><right>
