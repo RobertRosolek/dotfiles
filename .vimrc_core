@@ -9,11 +9,6 @@ nnoremap <C-l> :nohlsearch<CR><C-l>
 " Enable mouse support in console
 set mouse=a
 
-" highlight current line
-set cul
-" adjust color
-hi CursorLine term=none cterm=none ctermbg=3
-
 set cmdheight=2               " command line two lines high
 
 " edited buffers can be not displayed anywhere
@@ -24,3 +19,5 @@ set autowrite
 
 " gm to go to the center of the line
 nnoremap gm :call cursor(0, len(getline('.'))/2)<CR>
+
+nnoremap <leader>m :w \| :Errors<CR>
