@@ -13,6 +13,7 @@ autoload -Uz compinit
 compinit
 
 PAGER='less'
+EDITOR='vim'
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
