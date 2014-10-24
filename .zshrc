@@ -7,6 +7,23 @@ bindkey -e
 HISTSIZE=1000000
 SAVEHIST=1000000
 HISTFILE=~/.zhistory
+setopt INC_APPEND_HISTORY SHARE_HISTORY
+
+#Various options
+setopt APPEND_HISTORY
+unsetopt BG_NICE        # do NOT nice bg commands
+setopt CORRECT          # command CORRECTION
+setopt EXTENDED_HISTORY     # puts timestamps in the history
+setopt MENUCOMPLETE
+setopt ALL_EXPORT
+setopt HIST_IGNORE_ALL_DUPS
+
+# Set/unset  shell options
+setopt   notify globdots correct pushdtohome cdablevars autolist
+setopt   correctall autocd recexact longlistjobs
+setopt   autoresume histignoredups pushdsilent
+setopt   autopushd pushdminus extendedglob rcquotes mailwarning
+unsetopt bgnice autoparamslash
 
 # Use modern completion system
 autoload -Uz compinit
