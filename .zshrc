@@ -4,9 +4,9 @@ setopt histignorealldups sharehistory
 bindkey -e
 
 # Keep n lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=20000
-SAVEHIST=20000
-HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
+HISTFILE=~/.zhistory
 
 # Use modern completion system
 autoload -Uz compinit
