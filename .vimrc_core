@@ -6,24 +6,6 @@ nnoremap <space>k :Explore<CR>
 " clear highlighting with ctrl+l
 nnoremap <C-l> :nohlsearch<CR><C-l>
 
-" better still: clear highlighting after 3 seconds
-augroup NoHLSearch
-  au!
-
-  autocmd CursorHold,CursorMoved * call <SID>NoHLAfter(3)
-augroup END
-
-function! s:NoHLAfter(n)
-  if !exists('g:nohl_starttime')
-    let g:nohl_starttime = localtime()
-  else
-    if v:hlsearch && (localtime() - g:nohl_starttime) >= a:n
-      let @/ = ""
-      unlet g:nohl_starttime
-    endif
-  endif
-endfunction
-
 " Enable mouse support in console
 set mouse=a
 
