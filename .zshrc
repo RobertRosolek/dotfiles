@@ -131,7 +131,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Auto jump tool
 # https://github.com/joelthelion/autojump/blob/master/README.md
-. /usr/share/autojump/autojump.sh
+source $HOME/.autojump/etc/profile.d/autojump.sh
 
 # this is needed for vim to have good colors in tmux
 export TERM="xterm-256color"
