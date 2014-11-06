@@ -3,8 +3,8 @@ set shell=/bin/zsh
 " launch explorer
 nnoremap <space>k :Explore<CR>
 
-" clear highlighting with ctrl+l
-nnoremap <C-l> :nohlsearch<CR><C-l>
+" disable search highlight
+set nohlsearch
 
 " Enable mouse support in console
 set mouse=a
