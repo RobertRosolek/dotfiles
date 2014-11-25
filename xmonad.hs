@@ -20,7 +20,7 @@ import qualified XMonad.StackSet as W
 myConfig xmobarPipe =
   withUrgencyHook NoUrgencyHook defaultConfig
     {
-      terminal          = "Terminal --hide-menubar",
+      terminal          = "terminal --hide-menubar -e 'ssh dev'",
       focusFollowsMouse = False,
       workspaces        = myWorkspaces,
       layoutHook        = myLayoutHook,
