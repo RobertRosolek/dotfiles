@@ -12,6 +12,7 @@ import XMonad.Layout.Grid
 import XMonad.Layout.ToggleLayouts
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.Scratchpad
+import qualified XMonad.Layout.GridVariants as GridVariants
 import XMonad.Actions.GridSelect
 import System.IO
 import Data.List (isPrefixOf)
@@ -46,7 +47,8 @@ myLayoutHook =
     Mirror (Tall 1 (3/100) (1/2)) |||
     (reflectHoriz $ Tall 1 (3/100) (1/2)) |||
     (reflectVert $ Mirror (Tall 1 (3/100) (1/2))) |||
-    Full
+    Full |||
+    GridVariants.SplitGrid GridVariants.B 1 1 (55/100) (4/3) (5/100)
 
 myKeys =
   {- bindings below are for both qwerty and dvorak -}
