@@ -42,13 +42,13 @@ myWorkspaces = (map show $ [1 .. 9] ++ [0])
 
 myLayoutHook =
   avoidStruts $ toggleLayouts Full $ workspaceDir "~" $
+    GridVariants.SplitGrid GridVariants.B 1 1 (55/100) (4/3) (5/100) |||
     (reflectVert $ Column 1.5) |||
     Tall 1 (3/100) (1/2) |||
     Mirror (Tall 1 (3/100) (1/2)) |||
     (reflectHoriz $ Tall 1 (3/100) (1/2)) |||
     (reflectVert $ Mirror (Tall 1 (3/100) (1/2))) |||
-    Full |||
-    GridVariants.SplitGrid GridVariants.B 1 1 (55/100) (4/3) (5/100)
+    Full
 
 myKeys =
   {- bindings below are for both qwerty and dvorak -}
