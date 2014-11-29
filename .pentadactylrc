@@ -3,8 +3,8 @@ set strictfocus=*:laissez-faire
 set passkeys+=read.amazon.com:<space><left><right>
 
 " Allow GMail shortcuts
-set passkeys+=mail.google.com:jksacrqG#<CR>,gi,gl,gp,gt
-" Let Hint Message from X Links 
+set passkeys+=mail.google.com:jksacrqG#+-<CR>,gi,gl,gp,gt
+" Let Hint Message from X Links
 autocmd LocationChange mail.google.com set ht+=span.ata-asJ
 " Let Hint Expand Collapsed Conversations
 autocmd LocationChange mail.google.com set ht+=span.adx
