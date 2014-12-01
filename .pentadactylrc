@@ -1,6 +1,17 @@
-set passkeys+=mail.google.com:'!#*+-./<C-Down><C-s><Enter>?INU[]acefjk lmnopqrsuvxyz',*a,*n,*r,*s,*t,*u,ga,gc,gd,gi,gl,gs,gt,yo
-set strictfocus+=mail.google.com:laissez-faire
+set strictfocus=*:laissez-faire
+
 set passkeys+=read.amazon.com:<space><left><right>
+
+" Allow GMail shortcuts
+set passkeys+=mail.google.com:jksacrqG#+-<CR>,gi,gl,gp,gt
+" Let Hint Message from X Links
+autocmd LocationChange mail.google.com set ht+=span.ata-asJ
+" Let Hint Expand Collapsed Conversations
+autocmd LocationChange mail.google.com set ht+=span.adx
+" Let Hint Expand Message
+autocmd LocationChange mail.google.com set ht+=td.gF
+" Let Hint Expand Delete All Spam Messages
+autocmd LocationChange mail.google.com set ht+=span.x2
 
 " disable smooth scroll
 set scrollsteps=1

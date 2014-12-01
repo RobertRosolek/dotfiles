@@ -8,6 +8,7 @@ import XMonad.Layout.WorkspaceDir
 import XMonad.Prompt (defaultXPConfig, XPConfig(..))
 import XMonad.Prompt.Shell
 import XMonad.Layout.Column
+import XMonad.Actions.RotSlaves
 import XMonad.Layout.Grid
 import XMonad.Layout.ToggleLayouts
 import XMonad.Util.Run(spawnPipe)
@@ -21,7 +22,7 @@ import qualified XMonad.StackSet as W
 myConfig xmobarPipe =
   withUrgencyHook NoUrgencyHook defaultConfig
     {
-      terminal          = "Terminal --hide-menubar",
+      terminal          = "terminal --hide-menubar -e 'ssh dev'",
       focusFollowsMouse = False,
       workspaces        = myWorkspaces,
       layoutHook        = myLayoutHook,
@@ -42,13 +43,13 @@ myWorkspaces = (map show $ [1 .. 9] ++ [0])
 
 myLayoutHook =
   avoidStruts $ toggleLayouts Full $ workspaceDir "~" $
+    GridVariants.SplitGrid GridVariants.B 1 1 (55/100) (4/3) (5/100) |||
     (reflectVert $ Column 1.5) |||
     Tall 1 (3/100) (1/2) |||
     Mirror (Tall 1 (3/100) (1/2)) |||
     (reflectHoriz $ Tall 1 (3/100) (1/2)) |||
     (reflectVert $ Mirror (Tall 1 (3/100) (1/2))) |||
-    Full |||
-    GridVariants.SplitGrid GridVariants.B 1 1 (55/100) (4/3) (5/100)
+    Full
 
 myKeys =
   {- bindings below are for both qwerty and dvorak -}
@@ -58,10 +59,18 @@ myKeys =
     ("M-f", sendMessage ToggleStruts >> sendMessage ToggleLayout),
     ("M-r", shellPrompt defaultXPConfig),
     ("M-t", withFocused $ windows . W.sink),
-    ("M-S-l", spawn "xscreensaver-command -l"),
+    ("M-S-a", spawn "xscreensaver-command -l"),
     ("M-s", scratchpadSpawnActionTerminal "xterm +sb -bg black -fg white"),
     ("M-o", spawn "cateye post-trade"),
     ("M-i", spawn "ssh tot-qws-u12134 cateye post-trade")
+    , ("M-j"  , windows W.focusDown)
+    , ("M-k"  , windows W.focusUp  )
+    , ("M-S-j", windows W.swapDown )
+    , ("M-S-k", windows W.swapUp   )
+    , ("M-p"  , rotAllUp           )
+    , ("M-n"  , rotAllDown         )
+    , ("M-S-p", rotSlavesUp        )
+    , ("M-S-n", rotSlavesDown      )
   ]
   ++
   [ ("M-" ++ ws, windows $ W.greedyView ws) | ws <- myWorkspaces ]
