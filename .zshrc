@@ -45,6 +45,9 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+zstyle ':completion:*:*:vim:*:*files' ignored-patterns '*.cmi' '*.cmt' '*.exe' '*.cmti' '*.cmx' '*.ml.d' \
+  '*.mli.d' '*.o' '*.cmxa' '*.libdeps' '*.interface.deps' '*.a' '*.stub.names' '*.inferred-1step.deps' \
+  '*.pack-order'
 
 ## stop backward-kill-word on directory delimiter
 autoload -U select-word-style
