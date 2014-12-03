@@ -3,7 +3,7 @@ setopt histignorealldups sharehistory
 ## Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
 
-## Keep n lines of history within the shell and save it to ~/.zsh_history:
+## Keep n lines of history within the shell and save it to ~/.zhistory:
 HISTSIZE=1000000
 SAVEHIST=1000000
 HISTFILE=~/.zhistory
