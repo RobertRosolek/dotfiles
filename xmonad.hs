@@ -26,6 +26,7 @@ myConfig xmobarPipe =
       focusFollowsMouse = False,
       workspaces        = myWorkspaces,
       layoutHook        = myLayoutHook,
+      startupHook       = spawn "setxkbmap -option caps:escape && xmodmap /home/rrosolek/dotfiles/.Xmodmap",
       manageHook        = composeAll [ manageDocks,
                             scratchpadManageHook (W.RationalRect 0.2 0.2 0.6 0.6) ] ,
       logHook           = dynamicLogWithPP $ xmobarPP {
@@ -39,7 +40,7 @@ myConfig xmobarPipe =
 
 myModMask = mod1Mask {- for alt key use: mod1Mask -}
 
-myWorkspaces = (map show $ [1 .. 4] ++ [0])
+myWorkspaces = (map show $ [1 .. 2] ++ [9,0])
 
 myLayoutHook =
   avoidStruts $ toggleLayouts Full $ workspaceDir "~" $
