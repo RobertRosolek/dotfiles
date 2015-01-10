@@ -29,8 +29,3 @@ set findcase=smart
 " faster scrolling
 map -b j 8j
 map -b k 8k
-map -b h 8h
-map -b l 8l
-
-
-
