@@ -20,13 +20,14 @@ import Data.List (isPrefixOf)
 import qualified XMonad.StackSet as W
 
 myConfig xmobarPipe =
-  withUrgencyHook NoUrgencyHook defaultConfig
+  withUrgencyHook FocusHook defaultConfig
     {
       terminal          = "terminal --hide-menubar -e 'ssh dev'",
       focusFollowsMouse = False,
       workspaces        = myWorkspaces,
       layoutHook        = myLayoutHook,
-      startupHook       = spawn "setxkbmap -option caps:escape && xmodmap /home/rrosolek/dotfiles/.Xmodmap",
+      startupHook       = spawn
+      "setxkbmap -option caps:escape && xmodmap /home/rrosolek/dotfiles/.Xmodmap && pidgin",
       manageHook        = composeAll [ manageDocks,
                             scratchpadManageHook (W.RationalRect 0.2 0.2 0.6 0.6) ] ,
       logHook           = dynamicLogWithPP $ xmobarPP {
