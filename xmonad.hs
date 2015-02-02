@@ -19,6 +19,11 @@ import System.IO
 import Data.List (isPrefixOf)
 import qualified XMonad.StackSet as W
 
+myManageHook =
+  composeAll $ map (genWSHook . show) [0..9]
+  where
+    genWSHook i =(fmap (isPrefixOf $ "@" ++ i) title) --> doShift i
+
 myConfig xmobarPipe =
   withUrgencyHook FocusHook defaultConfig
     {
@@ -28,7 +33,12 @@ myConfig xmobarPipe =
       layoutHook        = myLayoutHook,
       startupHook       = spawn
       "setxkbmap -option caps:escape && xmodmap /home/rrosolek/dotfiles/.Xmodmap && pidgin",
-      manageHook        = composeAll [ manageDocks,
+      manageHook        = composeAll [
+                            className =? "Buddy List" --> doShift "9",
+                            className =? "@jabber" --> doShift "0",
+                            className =? "focus@will" --> doShift "9",
+                            myManageHook,
+                            manageDocks,
                             scratchpadManageHook (W.RationalRect 0.2 0.2 0.6 0.6) ] ,
       logHook           = dynamicLogWithPP $ xmobarPP {
                               ppOutput = hPutStrLn xmobarPipe,
