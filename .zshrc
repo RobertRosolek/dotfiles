@@ -94,3 +94,16 @@ export LESS=-r
 
 autoload bashcompinit
 bashcompinit
+
+# print exit status of every command, if non-zero
+function prompt {
+  exit_status=$?
+  red='\033[0;31m'
+  NC='\033[0m' # No Color
+  if (( $exit_status != 0 )); then
+    echo -e "${red}EXIT STATUS $exit_status${NC}"
+  fi
+}
+
+PROMPT_COMMAND=prompt
+precmd() { eval "$PROMPT_COMMAND" }
