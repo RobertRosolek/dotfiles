@@ -1,7 +1,11 @@
 setopt histignorealldups sharehistory
 
-## Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
+bindkey -v
+bindkey "^P" up-line-or-history
+bindkey "^N" down-line-or-history
+bindkey "^R" history-incremental-search-backward
+bindkey "^E" end-of-line
+bindkey "^A" beginning-of-line
 
 ## Keep n lines of history within the shell and save it to ~/.zhistory:
 HISTSIZE=1000000
