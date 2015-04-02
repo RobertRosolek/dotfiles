@@ -4,7 +4,7 @@
    #hot-network-questions { display: none; }
 }
 @-moz-document domain(stackoverflow.com) {
-   #hot-network-questions { display: none; }
+   #hot-network-questions { display: none !important; }
 }
 @-moz-document domain(unix.stackexchange.com) {
    #hot-network-questions { display: none; }

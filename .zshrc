@@ -6,6 +6,8 @@ bindkey "^N" down-line-or-history
 bindkey "^R" history-incremental-search-backward
 bindkey "^E" end-of-line
 bindkey "^A" beginning-of-line
+bindkey '\e.' insert-last-word
+
 
 ## Keep n lines of history within the shell and save it to ~/.zhistory:
 HISTSIZE=1000000
@@ -68,11 +70,11 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='mvim'
+ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
