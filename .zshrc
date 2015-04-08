@@ -8,6 +8,9 @@ bindkey "^E" end-of-line
 bindkey "^A" beginning-of-line
 bindkey '\e.' insert-last-word
 
+autoload edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
 
 ## Keep n lines of history within the shell and save it to ~/.zhistory:
 HISTSIZE=1000000
