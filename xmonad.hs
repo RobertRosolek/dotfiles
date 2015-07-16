@@ -1,5 +1,6 @@
 import XMonad
 import XMonad.Util.EZConfig
+import XMonad.Actions.WindowNavigation
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.UrgencyHook
@@ -51,11 +52,11 @@ myConfig xmobarPipe =
 
 myModMask = mod1Mask {- for alt key use: mod1Mask -}
 
-myWorkspaces = (map show $ [1 .. 2] ++ [9,0])
+myWorkspaces = (map show $ [1 .. 2] ++ [8,9,0])
 
 myLayoutHook =
   avoidStruts $ toggleLayouts Full $ workspaceDir "~" $
-    GridVariants.SplitGrid GridVariants.B 1 1 (55/100) (4/3) (5/100) |||
+    (reflectVert $ GridVariants.SplitGrid GridVariants.T 1 1 (55/100) (4/3) (5/100) ) |||
     (reflectVert $ Column 1.5) |||
     Tall 1 (3/100) (1/2) |||
     Mirror (Tall 1 (3/100) (1/2)) |||
@@ -98,5 +99,7 @@ main =
   do
     spawn "xscreensaver -no-splash"
     xmobarPipe <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
-    xmonad $ myConfig xmobarPipe
+    config <- withWindowNavigation (xK_k, xK_h, xK_j, xK_l)
+            $ myConfig xmobarPipe 
+    xmonad config
 
