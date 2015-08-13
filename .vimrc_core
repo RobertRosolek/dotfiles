@@ -38,3 +38,10 @@ function! HLNext (blinktime)
   call matchdelete(ring)
   redraw
 endfunction
+
+" Use 'the Silver Searcher' if available
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+  "set grepprg=ag\ --nogroup\ --nocolor\ --column\ $*
+  set grepformat=%f:%l:%c:%m
+endif

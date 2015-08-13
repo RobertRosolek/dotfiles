@@ -11,3 +11,11 @@ keycode 66 = Alt_L
 
 ! disable left control
 keycode 37 =
+keycode 37 = Mode_switch
+
+keycode 46 = l L bar
+keycode 33 = p P grave
+keycode 30 = u U asciitilde
+
+keycode 108 = Tab
+keycode 23 = bar
