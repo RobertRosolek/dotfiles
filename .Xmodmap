@@ -15,6 +15,7 @@ keycode 37 = Mode_switch
 
 keycode 46 = l L bar
 keycode 33 = p P grave
+keycode 29 = y Y exclam
 keycode 30 = u U asciitilde
 
 keycode 108 = Tab

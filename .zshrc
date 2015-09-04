@@ -1,5 +1,3 @@
-setopt histignorealldups sharehistory
-
 bindkey -v
 bindkey "^P" up-line-or-history
 bindkey "^N" down-line-or-history
@@ -13,8 +11,8 @@ zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
 ## Keep n lines of history within the shell and save it to ~/.zhistory:
-HISTSIZE=1000000
-SAVEHIST=1000000
+export HISTSIZE=1000000
+export SAVEHIST=1000000
 HISTFILE=~/.zhistory
 setopt INC_APPEND_HISTORY SHARE_HISTORY
 
