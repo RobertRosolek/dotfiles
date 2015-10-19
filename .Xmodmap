@@ -22,7 +22,8 @@ keycode 108 = Tab
 keycode 23 = bar
 
 keycode 10 = bar bar
-keycode 20 = minus bar
+keycode 20 = bar bar
+keycode 21 = bar bar
 keycode 32 = o O underscore
 keycode 31 = i I minus
 keycode 58 = m M 1
