@@ -26,4 +26,8 @@ keycode 20 = bar bar
 keycode 32 = o O underscore
 keycode 31 = i I minus
 keycode 57 = n N 1
+keycode 43 = h H plus
+keycode 45 = k K equal
+keycode 44 = j J 0
+keycode 47 = semicolon colon parenright
 
