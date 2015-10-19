@@ -20,3 +20,10 @@ keycode 30 = u U asciitilde
 
 keycode 108 = Tab
 keycode 23 = bar
+
+keycode 10 = bar bar
+keycode 20 = bar bar
+keycode 32 = o O underscore
+keycode 31 = i I minus
+keycode 24 = q Q 1
+
