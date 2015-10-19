@@ -53,7 +53,7 @@ myConfig xmobarPipe =
 myModMask = mod1Mask {- for alt key use: mod1Mask -}
 
 {-myWorkspaces = (map show $ [1 .. 2] ++ [8,9,0])-}
-myWorkspaces = ["y", "u", "i", "z", "a"]
+myWorkspaces = ["y", "u", "i", "z", "w"]
 
 myLayoutHook =
   avoidStruts $ toggleLayouts Full $ workspaceDir "~" $
