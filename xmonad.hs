@@ -68,15 +68,13 @@ myLayoutHook =
 myKeys =
   {- bindings below are for both qwerty and dvorak -}
   [
-    ("M-=", sendMessage Expand),
-    ("M--", sendMessage Shrink),
+    ("M-o", sendMessage Expand),
+    ("M-i", sendMessage Shrink),
     ("M-f", sendMessage ToggleStruts >> sendMessage ToggleLayout),
     ("M-r", shellPrompt defaultXPConfig),
     ("M-t", withFocused $ windows . W.sink),
     ("M-S-a", spawn "xscreensaver-command -l"),
     ("M-s", scratchpadSpawnActionTerminal "xterm +sb -bg black -fg white"),
-    ("M-o", spawn "cateye post-trade"),
-    ("M-i", spawn "ssh tot-qws-u12134 cateye post-trade"),
     ("M-<Print>", spawn "import screen.png")
     , ("M-j"  , windows W.focusDown)
     , ("M-k"  , windows W.focusUp  )
