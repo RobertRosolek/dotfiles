@@ -68,7 +68,6 @@ myLayoutHook =
 myKeys =
   {- bindings below are for both qwerty and dvorak -}
   [
-   ((modMask .|. shiftMask, xK_w     ), io (exitWith ExitSuccess)),  -- %! Quit xmonad
     ("M-=", sendMessage Expand),
     ("M--", sendMessage Shrink),
     ("M-f", sendMessage ToggleStruts >> sendMessage ToggleLayout),
