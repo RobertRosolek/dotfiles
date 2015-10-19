@@ -55,11 +55,11 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 zstyle ':completion:*:*:vim:*:*files' ignored-patterns '*.cmi' '*.cmt' '*.exe' '*.cmti' '*.cmx' '*.cmo' '*.ml.d' \
   '*.mli.d' '*.o' '*.cmxa' '*.libdeps' '*.interface.deps' '*.a' '*.stub.names' '*.inferred-1step.deps' \
   '*.pack-order' '*.build_info.*' '*.exe.build_info.*' '*.exe.hg_version.*' '*.objdeps' '*.ocaml_plugin.*' \
-  '*.fe.sexp'
+  '*.fe.sexp' '*.cmi.deps'
 zstyle ':completion:*:*:sl:*:*files' ignored-patterns '*.cmi' '*.cmt' '*.exe' '*.cmti' '*.cmx' '*.cmo' '*.ml.d' \
   '*.mli.d' '*.o' '*.cmxa' '*.libdeps' '*.interface.deps' '*.a' '*.stub.names' '*.inferred-1step.deps' \
   '*.pack-order' '*.build_info.*' '*.exe.build_info.*' '*.exe.hg_version.*' '*.objdeps' '*.ocaml_plugin.*' \
-  '*.fe.sexp'
+  '*.fe.sexp' '*.cmi.deps'
 zstyle ':completion:*:*:scp:*:*files' ignored-patterns '*.cmi' '*.cmt' '*.cmti' '*.cmx' '*.cmo' '*.ml.d' \
   '*.mli.d' '*.o' '*.cmxa' '*.libdeps' '*.interface.deps' '*.a' '*.stub.names' '*.inferred-1step.deps' \
   '*.pack-order' '*.build_info.*' '*.exe.build_info.*' '*.exe.hg_version.*' '*.objdeps' '*.ocaml_plugin.*'
