@@ -22,6 +22,7 @@ keycode 108 = Tab
 keycode 23 = bar
 
 keycode 10 = bar bar
+keycode 19 = bar bar
 keycode 20 = bar bar
 keycode 21 = bar bar
 keycode 32 = o O underscore
