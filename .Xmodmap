@@ -31,3 +31,5 @@ keycode 45 = k K equal
 keycode 44 = j J 0
 keycode 47 = semicolon colon parenright
 
+! natuall mouse scrolling
+pointer = 1 2 3 5 4
