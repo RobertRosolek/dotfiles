@@ -3,8 +3,6 @@ set shell=/bin/zsh
 " launch explorer
 nnoremap <space>k :Explore<CR>
 
-set wrap
-
 " disable search highlight
 set nohlsearch
 
